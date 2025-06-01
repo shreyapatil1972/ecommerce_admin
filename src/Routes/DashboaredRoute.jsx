@@ -5,13 +5,16 @@ import Profile from '../pages/Profile';
 import Brand from '../components/brand/brand';
 import Category from '../components/Category/Category';
 import Product from '../components/Product/Product';
+import ProductDetails from '../components/Product/ProductDetails'
 
 const DashboardRoutes = [
   <Route index element={<Dashboard />} key="dashboard" />,
   <Route path="profile" element={<Profile />} key="profile" />,
   <Route path="brand" element={<Brand />} key="brand" />,
   <Route path="category" element={<Category />} key="category" />,
-  <Route path='product' element={<Product/>} key="product"/>
+  <Route path='product' element={<Product/>} key="product"/>,
+  <Route path="/product/:id" element={<ProductDetails />} />
+
 ];
 
 export default DashboardRoutes;

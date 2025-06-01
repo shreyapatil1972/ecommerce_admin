@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getProductByID, deleteProduct } from '../../API/Api';
+import { getproductByID, deleteproduct } from '../../API/Api';
 import { Button, Card, Row, Col } from 'react-bootstrap';
-import { ArrowLeft } from 'react-bootstrap-icons';
+import { BsArrowLeft } from "react-icons/bs";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -10,7 +10,7 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
 
   const fetchProduct = async () => {
-    const response = await getProductByID(id);
+    const response = await getproductByID(id);
     if (response.success) {
       setProduct(response.product);
     }
@@ -19,7 +19,7 @@ const ProductDetails = () => {
   const handleDelete = async () => {
     const confirm = window.confirm('Are you sure you want to delete this product?');
     if (confirm) {
-      const response = await deleteProduct(id);
+      const response = await deleteproduct(id);
       if (response.success) {
         alert('Product deleted successfully!');
         navigate('/products');
@@ -40,9 +40,9 @@ const ProductDetails = () => {
       <Button
         variant="light"
         className="mb-3"
-        onClick={() => navigate('/products')}
+        onClick={() => navigate('/product')}
       >
-        <ArrowLeft size={20} /> Back
+        <BsArrowLeft size={20} /> Back
       </Button>
 
       <Card className="p-4 shadow" style={{ backgroundColor: '#1c1c1c', color: '#E0E0E0' }}>
@@ -59,10 +59,10 @@ const ProductDetails = () => {
             <h3>{product.name}</h3>
             <p><strong>Description:</strong> {product.description}</p>
             <p><strong>Price:</strong> ₹{product.price}</p>
-            <p><strong>Quantity:</strong> {product.quantity}</p>
-            <p><strong>In Stock:</strong> {product.inStock ? 'Yes' : 'No'}</p>
-            <p><strong>Category:</strong> {product.category?.name || 'N/A'}</p>
-            <p><strong>Brand:</strong> {product.brand?.name || 'N/A'}</p>
+            <p><strong>Quantity:</strong> {product.Quantity}</p>
+            <p><strong>In Stock:</strong> {product.Instock ? 'Yes' : 'No'}</p>
+            <p><strong>Category:</strong> {product.Category?.name || 'N/A'}</p>
+            <p><strong>Brand:</strong> {product.Brand?.name || 'N/A'}</p>
 
             <div className="d-flex gap-3 mt-3">
               <Button

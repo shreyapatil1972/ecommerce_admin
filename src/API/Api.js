@@ -81,6 +81,10 @@ export const addNewBrand = async (payload) => {
   return await apiRequest("/brand/create", payload, "post");
 };
 
+export const updateBrand = async (ID, payload) => {
+  return await apiRequest(`/brand/updateBrand/${ID}`, payload, "put");
+};
+
 export const deleteBrand = async (ID) => {
   return await apiRequest(`/brand/deleteBrand/${ID}`, {}, "delete");
 };
@@ -93,6 +97,10 @@ export const deleteCategory = async (ID) => {
   return await apiRequest(`/category/deleteCategory/${ID}`, {}, "delete");
 };
 
+export const updateCategory = async (ID, payload) => {
+  return await apiRequest(`/category/updateCategory/${ID}`, payload, "put");
+};
+
 export const getAllCategories = async () => {
   return await apiRequest("/category/getAllCategories", {}, "get");
 };
@@ -103,14 +111,14 @@ export const createproduct =async(formData) => {
 };
 
 export const deleteproduct = async (ID) => {
-  return await apiRequest(`/category/deleteCategory/${ID}`, {}, "delete");
+  return await apiRequest(`/product/deleteCategory/${ID}`, {}, "delete");
 };
 
 export const getAllproducts = async () => {
-  return await apiRequest("/category/getAllCategories", {}, "get");
+  return await apiRequest("/product/getAllproducts", {}, "get");
 };
 
-export const getproductByID = async () =>{
+export const getproductByID = async (id) =>{
    return await apiRequest(`/product/getproductByID/${id}`, {}, 'get');
 };
 

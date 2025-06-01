@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { getAllproducts } from '../../API/Api';
 import AddProduct from './AddProduct';
 
+
 const Product = () => {
   const [products, setProducts] = useState([]);
   const [addProductModalShow, setAddProductModalShow] = useState(false);
@@ -64,9 +65,10 @@ const Product = () => {
                   style={{
                     cursor: 'pointer',
                     backgroundColor: '#1c1c1c',
+                    border:"1px solid #C19A6B",
                     color: '#E0E0E0'
                   }}
-                  onClick={() => navigate(`/products/${product.id}`)}
+                  onClick={() => navigate(`/product/${product.id}`)}
                 >
                   <Card.Img
                     variant="top"

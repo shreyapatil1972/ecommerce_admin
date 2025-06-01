@@ -7,10 +7,10 @@ const AddProduct = ({ show, onHide, onProductAdded }) => {
     name: '',
     description: '',
     price: '',
-    Category_id: '',    // uppercase C
-    Brand_id: '',       // uppercase B
-    Quantity: '',       // uppercase Q
-    Instock: true,      // uppercase I and S
+    Category_id: '',   
+    Brand_id: '',       
+    Quantity: '',       
+    Instock: true,  
     image: null,
   });
 
