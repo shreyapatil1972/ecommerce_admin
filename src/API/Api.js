@@ -111,7 +111,7 @@ export const createproduct =async(formData) => {
 };
 
 export const deleteproduct = async (ID) => {
-  return await apiRequest(`/product/deleteCategory/${ID}`, {}, "delete");
+  return await apiRequest(`/product/deleteproduct/${ID}`, {}, "delete");
 };
 
 export const getAllproducts = async () => {

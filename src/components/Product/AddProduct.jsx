@@ -43,7 +43,7 @@ const AddProduct = ({ show, onHide, onProductAdded }) => {
       !product.name ||
       !product.description ||
       !product.price ||
-      !product.Category_id ||
+      !product.Category_id||
       !product.Brand_id ||
       !product.Quantity ||
       !product.image

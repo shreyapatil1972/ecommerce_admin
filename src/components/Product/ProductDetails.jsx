@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { getproductByID, deleteproduct } from '../../API/Api';
 import { Button, Card, Row, Col } from 'react-bootstrap';
 import { BsArrowLeft } from "react-icons/bs";
+import EditProduct from './EditProduct';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -61,8 +62,8 @@ const ProductDetails = () => {
             <p><strong>Price:</strong> ₹{product.price}</p>
             <p><strong>Quantity:</strong> {product.Quantity}</p>
             <p><strong>In Stock:</strong> {product.Instock ? 'Yes' : 'No'}</p>
-            <p><strong>Category:</strong> {product.Category?.name || 'N/A'}</p>
-            <p><strong>Brand:</strong> {product.Brand?.name || 'N/A'}</p>
+            <p><strong>Category:</strong> {product.Category_id || 'N/A'}</p>
+            <p><strong>Brand:</strong> {product.Brand_id || 'N/A'}</p>
 
             <div className="d-flex gap-3 mt-3">
               <Button
