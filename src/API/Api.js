@@ -122,8 +122,9 @@ export const getproductByID = async (id) =>{
    return await apiRequest(`/product/getproductByID/${id}`, {}, 'get');
 };
 
-export const updateproduct = async () => {
-  return await apiRequest(`/product/updateproduct/${id}`, formData, 'put', true); // true = multipart/form-data
+export const updateproduct = async (id, formData) => {
+  return await apiRequest(`/product/updateproduct/${id}`, formData, 'put' );
 };
+
 
 export default axiosInstance;

@@ -6,8 +6,8 @@ import { Outlet } from 'react-router-dom';
 const Layout = () => {
   return (
     <>
-     <header style={{"height":"120px","backgroundColor":"#aaa"}}>
-      <img src={logo} height={120} width={330}></img><span>Company Name</span>
+     <header style={{"height":"120px","backgroundColor":"   black"}}>
+      <img src={logo} height={120} width={330}></img><span> </span>
     </header>
     <div style={{
       display: 'flex',

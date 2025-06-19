@@ -19,8 +19,17 @@ const LoginPage = () => {
     const response = await loginAPI({ email, password });
 
     if (response.token) {
+      // Check if the user is an admin
+      if (!response.user?.isAdmin) {
+        setError("Unauthorized: Only admins can access this panel.");
+        return;
+      }
+
+      // ✅ Admin is authorized
       alert("Login successful!");
-      navigate("/");
+      localStorage.setItem("token", response.token);
+      localStorage.setItem("user", JSON.stringify(response.user));
+      navigate("/"); // Redirect to admin panel page
     } else {
       setError("Login failed. Please check your credentials.");
     }

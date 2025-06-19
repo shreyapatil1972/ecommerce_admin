@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { deleteproduct } from '../../API/Api'; // Note the lowercase "deleteproduct"
+import { deleteproduct } from '../../API/Api';
 
 function DeleteProduct({ show, onHide, productId, onProductDelete }) {
   const handleDeleteProduct = async () => {

@@ -12,7 +12,7 @@ const DashboardRoutes = [
   <Route path="profile" element={<Profile />} key="profile" />,
   <Route path="brand" element={<Brand />} key="brand" />,
   <Route path="category" element={<Category />} key="category" />,
-  <Route path='product' element={<Product/>} key="product"/>,
+  <Route path='/product' element={<Product/>} key="product"/>,
   <Route path="/product/:id" element={<ProductDetails />} />
 
 ];
